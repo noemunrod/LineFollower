@@ -5,10 +5,25 @@ import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
 
 # TODO Insert here the GPIO Constants connected to the motors
+GPIO.setmode(GPIO.BOARD)
+engine_left_pin = 11
+engine_right_rightpin = 13
 
+
+def engineLeftOff():
+    GPIO.output(engine_left_pin, GPIO.LOW)
+
+
+def engineRightOff():
+    GPIO.output(engine_right_pin, GPIO.LOW)
 # TODO Insert here the GPIO Constants connected to the sensors
 
 # TODO Insert here a function to run a motor with a specific speed
+
+
+def engineLeftOn(speed):
+    GPIO.output(engine_left_pin, GPIO.HIGH)
+
 
 # TODO Insert here a function to stop a motor
 
