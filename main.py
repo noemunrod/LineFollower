@@ -1,6 +1,6 @@
 """Main script to run LineFollower conected to the Raspberry 4."""
 import RPi.GPIO as GPIO
-
+import time
 # Set the GPIO mode
 GPIO.setmode(GPIO.BCM)
 
@@ -36,7 +36,24 @@ def readSensors():
 # TODO Insert here a function to change the motor speed based on the sensors readings
 
 # TODO Insert here a function to turn the robot based on the sensors readings
-
+def turnSensorsRead():
+    while true:
+        left, right, middle = readSensors()
+        if middle ==1:
+            engineLeftOn
+            
+        elif left ==1:
+            engineLeftOn
+            
+        elif right ==1:
+            engineLeftOn
+            
+        else:
+            engineLeftOff
+            engineRightOff
+            
+            time.sleep(0.05)
+            
 # TODO Insert here a function to read the sensors and return the line position
 
 # TODO Insert here a function to run the motors based on the sensors readings
