@@ -15,22 +15,23 @@ right_sensor = 6
 middle_sensor =13
 
 # TODO Insert here a function to run a motor with a specific speed
-
-
 def engineLeftOn(speed):
     GPIO.output(engine_left_pin, GPIO.HIGH)
 
 
 # TODO Insert here a function to stop a motor
-
 def engineLeftOff():
     GPIO.output(engine_left_pin, GPIO.LOW)
-
 
 def engineRightOff():
     GPIO.output(engine_right_pin, GPIO.LOW)
 
 # TODO Insert here a function to read the sensors
+def readSensors():
+ left = GPIO.input(left_sensor)
+ right = GPIO.input(right_sensor)
+ middle = GPIO.input(right_sensor)
+ return left,right,middle
 
 # TODO Insert here a function to change the motor speed based on the sensors readings
 
